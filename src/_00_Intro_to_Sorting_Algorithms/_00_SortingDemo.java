@@ -77,9 +77,9 @@ public class _00_SortingDemo {
         for (int i = 0; i < arr3.length; i++) {
             for (int k = 0; k < arr3.length - 1; k++) {
                 
-                // "a".compareTo( "b" ) => -1
-                // "b".compareTo( "a" ) => 1
-                // "b".compareTo( "b" ) => 0
+                // "a".compareTo( "b" ) < 0
+                // "b".compareTo( "a" ) > 0
+                // "b".compareTo( "b" ) = 0
                 if( arr3[k].compareTo(arr3[ k+1 ]) > 0 ) {
                     String temp = arr3[k];
                     arr3[k] = arr3[ k+1 ];
