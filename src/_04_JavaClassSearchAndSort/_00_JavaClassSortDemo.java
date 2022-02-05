@@ -85,7 +85,7 @@ public class _00_JavaClassSortDemo {
         }
         
         Collections.sort(strList, new MyCustomCompareClass());
-        
+
         System.out.println("Sort by last letter using the Collections class:");
         
         for( String str : strList ) {

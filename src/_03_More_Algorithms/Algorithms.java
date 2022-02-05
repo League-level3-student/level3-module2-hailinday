@@ -81,4 +81,50 @@ public class Algorithms {
         }
        return words.get(wordo);
    }
+	public static boolean containsSOS(List<String> message) {
+		for( int i = 0; i <  message.size(); i++ ) {
+			if (message.get(i).equals("... --- ...")) {
+				return true;
+			}
+		}
+		return false;
+		
+	}
+	public static List<Double> sortScores(List<Double> results) {
+		for( int i = 0; i <  results.size(); i++ ) {
+			for( int j = 0; j <  results.size()-1; j++ ) {
+				if (results.get(j) > results.get(j+1)) {
+					Double swap = results.get(j+1);
+					results.set(j+1, results.get(j));
+					results.set(j, swap);
+				}
+			}
+		}
+		return results;
+	}
+	public static List<String> sortDNA(List<String> sorted) {
+		for( int i = 0; i <  sorted.size(); i++ ) {
+			for( int j = 0; j <  sorted.size()-1; j++ ) {
+				if (sorted.get(j).length() > sorted.get(j+1).length()) {
+					String swap = sorted.get(j);
+					sorted.set(j, sorted.get(j+1));
+					sorted.set(j+1, swap);
+				}
+			}
+		}
+		return sorted;
+	}
+	public static List<String> sortWords(List<String> sorted) {
+		for( int i = 0; i <  sorted.size(); i++ ) {
+			for( int j = 0; j <  sorted.size()-1; j++ ) {
+				if (sorted.get(j).compareTo(sorted.get(j+1)) > 0) {
+					String swap = sorted.get(j);
+					sorted.set(j, sorted.get(j+1));
+					sorted.set(j+1, swap);
+				}
+			}
+		}
+		return sorted;
+	}
+	
 }
